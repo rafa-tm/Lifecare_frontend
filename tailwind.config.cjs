@@ -10,6 +10,7 @@ module.exports = {
         sans: ["Roboto", ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        backBrand: "#F1FAEE",
         primaryBrand: {
           100: "#ecf1f9",
           200: "#c6d6ec",

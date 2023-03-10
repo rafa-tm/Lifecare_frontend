@@ -6,22 +6,24 @@ export default function Button({ label, type, link, action }) {
   switch (type) {
     case "primary":
       buttontype =
-        "bg-primaryBrand-700 hover:bg-primaryBrand-900 text-white active:bg-primaryBrand-400";
+        "bg-primaryBrand-700 hover:bg-primaryBrand-900 text-white active:bg-primaryBrand-400 text-sm";
       break;
     case "secondary":
       buttontype =
-        "bg-secondaryBrand-600 hover:bg-secondaryBrand-700 text-white active:bg-secondaryBrand-400";
+        "bg-secondaryBrand-600 hover:bg-secondaryBrand-700 text-white active:bg-secondaryBrand-400 text-sm";
       break;
     case "tertiary":
       buttontype =
-        "border-2 border-secondaryBrand-600 hover:bg-secondaryBrand-100 text-secondaryBrand-600 active:bg-red-400";
+        "border-2 border-secondaryBrand-600 hover:bg-secondaryBrand-100 text-secondaryBrand-600 active:bg-secondaryBrand-400 text-sm";
+      break;
+    case "text":
+      buttontype = "text-white hover:underline decoration-1 text-md";
       break;
     default:
       throw "Button must have a type";
   }
 
-  const buttonClasses =
-    buttontype + " py-4 px-8 rounded-lg text-center text-sm";
+  const buttonClasses = buttontype + " py-4 px-8 rounded-lg text-center";
 
   if (typeof action === "string") {
     action = () => {};
