@@ -5,6 +5,9 @@ import NavBar from "../components/NavBar";
 export default function Home() {
   return (
     <div>
+      <NavBar type="home" />
+      <NavBar type="client" />
+      <NavBar type="profissional" />
       <NavBar type="back" />
       <div className="flex gap-4 bg-black">
         <Button label="Teste" type="primary" action="profile" />

@@ -1,7 +1,7 @@
 import Button from "./Button";
 import logo from "/Logotipo.svg";
 import { Link } from "react-router-dom";
-import { MdArrowBackIos } from "react-icons/md";
+import { MdArrowBackIos, MdLogout, MdPeople } from "react-icons/md";
 
 export default function NavBar({ type }) {
   switch (type) {
@@ -11,7 +11,7 @@ export default function NavBar({ type }) {
           <Link to="/">
             <img src={logo} alt="Logotipo LifeCare" className="w-5/6" />
           </Link>
-          <div>
+          <div className="flex flex-row gap-4">
             <Button label="Como funciona" type="text" link="#" action="" />
             <Button label="Especialidades" type="text" link="#" action="" />
             <Button
@@ -30,13 +30,21 @@ export default function NavBar({ type }) {
           <Link to="/">
             <img src={logo} alt="Logotipo LifeCare" className="w-5/6" />
           </Link>
-          <div>
-            <Button label="Como funciona" type="text" link="#" action="" />
-            <Button label="Especialidades" type="text" link="#" action="" />
+          <div className="flex flex-row gap-4">
             <Button
-              label="Entrar ou Cadastrar"
-              type="primary"
-              link="login"
+              label="Profissionais disponiveis"
+              type="icon"
+              icon="left"
+              iconName={<MdPeople size={20} />}
+              link="/bucaprofissionais"
+              action=""
+            />
+            <Button
+              label="Sair"
+              type="icon"
+              icon="right"
+              iconName={<MdLogout size={20} />}
+              link="/bucaprofissionais"
               action=""
             />
           </div>
@@ -49,13 +57,13 @@ export default function NavBar({ type }) {
           <Link to="/">
             <img src={logo} alt="Logotipo LifeCare" className="w-5/6" />
           </Link>
-          <div>
-            <Button label="Como funciona" type="text" link="#" action="" />
-            <Button label="Especialidades" type="text" link="#" action="" />
+          <div className="flex flex-row gap-4">
             <Button
-              label="Entrar ou Cadastrar"
-              type="primary"
-              link="login"
+              label="Sair"
+              type="icon"
+              icon="right"
+              iconName={<MdLogout size={20} />}
+              link="/bucaprofissionais"
               action=""
             />
           </div>

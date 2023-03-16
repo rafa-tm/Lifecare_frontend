@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Button({ label, type, link, action }) {
+export default function Button({ label, type, icon, iconName, link, action }) {
   let buttontype = "";
 
   switch (type) {
@@ -19,14 +19,38 @@ export default function Button({ label, type, link, action }) {
     case "text":
       buttontype = "text-white hover:underline decoration-1 text-md";
       break;
+    case "icon":
+      buttontype =
+        "flex flex-row items-center bg-primaryBrand-700 hover:bg-primaryBrand-900 text-white active:bg-primaryBrand-400 text-sm py-4 px-8 rounded-lg text-center";
+      break;
     default:
-      throw "Button must have a type";
+      throw "Button must be a type";
   }
 
   const buttonClasses = buttontype + " py-4 px-8 rounded-lg text-center";
 
   if (typeof action === "string") {
     action = () => {};
+  }
+
+  if (icon === "right") {
+    return (
+      <Link to={link} className={buttonClasses}>
+        <div className="flex flex-row gap-2 items-center">
+          <span>{label}</span>
+          {iconName}
+        </div>
+      </Link>
+    );
+  } else if (icon === "left") {
+    return (
+      <Link to={link} className={buttonClasses}>
+        <div className="flex flex-row gap-2 items-center">
+          {iconName}
+          <span>{label}</span>
+        </div>
+      </Link>
+    );
   }
 
   if (link) {
