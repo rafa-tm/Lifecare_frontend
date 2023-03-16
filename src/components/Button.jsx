@@ -27,7 +27,8 @@ export default function Button({ label, type, icon, iconName, link, action }) {
       throw "Button must be a type";
   }
 
-  const buttonClasses = buttontype + " py-4 px-8 rounded-lg text-center";
+  const buttonClasses =
+    buttontype + " py-4 px-8 rounded-lg text-center font-medium max-w-max";
 
   if (typeof action === "string") {
     action = () => {};
