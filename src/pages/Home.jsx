@@ -26,6 +26,48 @@ export default function Home() {
             className="max-w-lg"
           />
         </div>
+
+        {/*especialidades*/}
+        <div className="w-full h-min  bg-secondaryBrand-500 flex flex-col items-center">
+        <div className="w-full h-min bg-secondaryBrand-500 flex flex-col items-center  text-white">
+          <p className="font-bold text-2xl text-center mt-10">
+            Como funciona?
+          </p>
+          <p className="font-bold text-lg text-center">
+            Muito Simples!
+          </p>
+        </div>
+        <div className="w-full h-min bg-secondaryBrand-500 flex flex-col items-center justify-center my-5  text-white">
+          <div className="w-full flex flex-row items-center justify-center ">
+            <div>
+              <p className="rounded-md bg-primaryBrand-700 py-10 px-10">1</p>
+            </div>
+            <div className="w-3/6 rounded-md bg-primaryBrand-400 flex flex-col  text-xl my-5  text-center">
+              <p className="font-bold text-2xl text-center my-3">Busca</p>
+              <p className="my-3">Busque por uma área e especialidade desejada</p>
+            </div>
+            </div>
+            <div className="w-full flex flex-row items-center justify-center">
+            <div>
+              <p className="rounded-md bg-primaryBrand-700 py-10 px-10">2</p>
+            </div>
+            <div className="w-3/6 rounded-md bg-primaryBrand-400 flex flex-col  text-xl  my-5 text-center">
+              <p className="font-bold text-2xl text-center my-3">Agendamento</p>
+              <p className="my-3">Realize o agendamento com o profissional escolhido</p>
+            </div>
+            </div>
+            <div className="w-full flex flex-row items-center justify-center">
+            <div>
+              <p className="rounded-md bg-primaryBrand-700 py-10 px-10">3</p>
+            </div>
+            <div className="w-3/6 rounded-md bg-primaryBrand-400 flex flex-col  text-xl  my-5  text-center">
+              <p className="font-bold text-2xl text-center my-3">Consulta</p>
+              <p className="my-3">Compareça ao consultório na data e horário marcados</p>
+            </div>
+          </div>
+        </div>
+        </div>
+
         {/*footer*/}
         <div className="w-full h-min bg-primaryBrand-400 flex flex-row py-10 px-6 justify-between items-center text-white">
           <div>
