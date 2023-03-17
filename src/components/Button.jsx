@@ -36,12 +36,12 @@ export default function Button({ label, type, icon, iconName, link, action }) {
 
   if (icon === "right") {
     return (
-      <Link to={link} className={buttonClasses}>
+      <button onClick={action} className={buttonClasses}>
         <div className="flex flex-row gap-2 items-center">
           <span>{label}</span>
           {iconName}
         </div>
-      </Link>
+      </button>
     );
   } else if (icon === "left") {
     return (

@@ -1,13 +1,15 @@
 import Button from "./Button";
 import logo from "/Logotipo.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MdArrowBackIos, MdLogout, MdPeople } from "react-icons/md";
 
-export default function NavBar({ type }) {
+export default function NavBar({ type, action }) {
+  const navigate = useNavigate();
+
   switch (type) {
     case "home": {
       return (
-        <div className="w-full h-min bg-primaryBrand-400 flex flex-row p-4 justify-between items-center">
+        <div className="w-full h-min bg-primaryBrand-400 flex flex-row py-4 px-6 justify-between items-center">
           <Link to="/">
             <img src={logo} alt="Logotipo LifeCare" className="w-5/6" />
           </Link>
@@ -26,7 +28,7 @@ export default function NavBar({ type }) {
     }
     case "client": {
       return (
-        <div className="w-full h-min bg-primaryBrand-400 flex flex-row p-4 justify-between items-center">
+        <div className="w-full h-min bg-primaryBrand-400 flex flex-row py-4 px-6 justify-between items-center">
           <Link to="/">
             <img src={logo} alt="Logotipo LifeCare" className="w-5/6" />
           </Link>
@@ -44,8 +46,7 @@ export default function NavBar({ type }) {
               type="icon"
               icon="right"
               iconName={<MdLogout size={20} />}
-              link="/bucaprofissionais"
-              action=""
+              action={action}
             />
           </div>
         </div>
@@ -53,7 +54,7 @@ export default function NavBar({ type }) {
     }
     case "profissional": {
       return (
-        <div className="w-full h-min bg-primaryBrand-400 flex flex-row p-4 justify-between items-center">
+        <div className="w-full h-min bg-primaryBrand-400 flex flex-row py-4 px-6 justify-between items-center">
           <Link to="/">
             <img src={logo} alt="Logotipo LifeCare" className="w-5/6" />
           </Link>
@@ -64,7 +65,7 @@ export default function NavBar({ type }) {
               icon="right"
               iconName={<MdLogout size={20} />}
               link="/bucaprofissionais"
-              action=""
+              action={action}
             />
           </div>
         </div>
@@ -73,9 +74,14 @@ export default function NavBar({ type }) {
     case "back": {
       return (
         <div className="w-full h-min bg-primaryBrand-400 flex flex-row px-8 py-4 justify-between items-center">
-          <Link to="/" className="p-4">
+          <button
+            onClick={() => {
+              navigate(-1);
+            }}
+            className="p-4"
+          >
             <MdArrowBackIos color="white" size={24} />
-          </Link>
+          </button>
           <Link to="/">
             <img src={logo} alt="Logotipo LifeCare" className="w-5/6" />
           </Link>
