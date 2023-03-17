@@ -1,4 +1,5 @@
 import Button from "../components/Button";
+import logo from "/Logotipo.svg";
 import TextField from "../components/TextField";
 import NavBar from "../components/NavBar";
 import imgsession1 from "/Doctors_amico.svg";
@@ -25,8 +26,30 @@ export default function Home() {
             className="max-w-lg"
           />
         </div>
-        <div></div>
-        <div></div>
+        {/*footer*/}
+        <div className="w-full h-min bg-primaryBrand-400 flex flex-row py-10 px-6 justify-between items-center text-white">
+          <div>
+           <img src={logo} alt="Logotipo LifeCare" className="w-5/6" />
+          </div>
+           <div className="flex flex-col gap-1  ">
+           <p className="font-bold text-xl">
+              Privacidade
+            </p>
+            <div className=" flex flex-col gap-1">
+              <p>Política de cookies</p>
+              <p>Política de Privacidade</p>
+              <p>Termos de Uso</p>
+            </div>
+           </div>
+           <div className="flex flex-col gap-1  ">
+            <p className="font-bold text-xl">
+              00.000.0000/0001-00
+            </p>
+            <p>Rod. Washington Luiz, s/n - Monjolinho</p>
+            <p>São Carlos - SP</p>
+            <p>LifeCare®</p>
+           </div>
+        </div>
       </div>
     </div>
   );
