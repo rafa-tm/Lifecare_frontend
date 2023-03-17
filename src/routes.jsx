@@ -17,7 +17,7 @@ export default function Rotas() {
           <Route index element={<Home />} />
           <Route path="profile" element={<Profile />} />
           <Route path="login" element={<Login />} />
-          <Route path="bucaprofissionais" element={<SearchProfessionals />} />
+          <Route path="buscaprofissionais" element={<SearchProfessionals />} />
           <Route path="teste" element={<Teste />} />
         </Route>
       </Routes>
