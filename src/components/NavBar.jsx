@@ -3,7 +3,7 @@ import logo from "/Logotipo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { MdArrowBackIos, MdLogout, MdPeople } from "react-icons/md";
 
-export default function NavBar({ type, action }) {
+export default function NavBar({ type, action, action2 }) {
   const navigate = useNavigate();
 
   switch (type) {
@@ -14,8 +14,8 @@ export default function NavBar({ type, action }) {
             <img src={logo} alt="Logotipo LifeCare" className="w-5/6" />
           </Link>
           <div className="flex flex-row gap-4">
-            <Button label="Como funciona" type="text" link="#" action="" />
-            <Button label="Especialidades" type="text" link="#" action="" />
+            <Button label="Como funciona" type="text" action={action} />
+            <Button label="Especialidades" type="text" action={action2} />
             <Button
               label="Entrar ou Cadastrar"
               type="primary"
@@ -38,7 +38,7 @@ export default function NavBar({ type, action }) {
               type="icon"
               icon="left"
               iconName={<MdPeople size={20} />}
-              link="/bucaprofissionais"
+              link="/buscaprofissionais"
               action=""
             />
             <Button
@@ -64,7 +64,6 @@ export default function NavBar({ type, action }) {
               type="icon"
               icon="right"
               iconName={<MdLogout size={20} />}
-              link="/bucaprofissionais"
               action={action}
             />
           </div>

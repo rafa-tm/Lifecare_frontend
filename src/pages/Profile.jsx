@@ -16,7 +16,7 @@ export default function Profile() {
     case "profissional":
       return (
         <div>
-          <ProfessionalProfile />;
+          <ProfessionalProfile />
         </div>
       );
     default:

@@ -15,13 +15,17 @@ export default function Profile() {
   useEffect(() => {
     async function autoLogin() {
       const token_local = localStorage.getItem("token");
-
-      if (token_local != null) {
-        const data = { token: token_local };
-        const response = await api.post("verificalogin", data);
-        if (response.data.user) {
-          history("/profile");
+      try {
+        if (token_local != null) {
+          const data = { token: token_local };
+          await api.post("verificalogin", data).then((response) => {
+            if (response.data.user) {
+              history("/profile");
+            }
+          });
         }
+      } catch (err) {
+        setHasError(err.response.data.erro);
       }
     }
     autoLogin();
