@@ -51,12 +51,12 @@ export default function Profile() {
   return (
     <div>
       <NavBar type="back" />
-      <div className=" flex flex-row gap-32 w-full my-32 justify-center items-center">
-        <img src={imagemCare} alt="" className="max-w-md" />
-        <div className="w-1/2 max-w-lg flex flex-col gap-10 justify-center">
+      <div className=" flex flex-col-reverse gap-16 w-full my-32 justify-center items-center lg:flex-row">
+        <img src={imagemCare} alt="" className="w-3/4 max-w-md" />
+        <div className="w-10/12 max-w-xl flex flex-col gap-10 justify-center items-center">
           <form
             onSubmit={handleLogin}
-            className="flex flex-col gap-4 items-center"
+            className="flex flex-col gap-4 items-center w-full"
           >
             <TextField
               id="email"
@@ -84,11 +84,11 @@ export default function Profile() {
             <Button label="Entrar" type="primary" action="" />
           </form>
 
-          <div className="flex flex-col gap-6 justify-between items-center">
+          <div className="flex flex-col gap-6 justify-between items-center md:w-3/4">
             <p className="text-center text-lg font-bold">
               Ainda não possui uma conta? Crie agora mesmo!
             </p>
-            <div className="flex flex-row w-3/4 justify-between items-center">
+            <div className="flex flex-row gap-4 w-full justify-between items-center">
               <Button
                 label="Sou cliente"
                 type="tertiary"

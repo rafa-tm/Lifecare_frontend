@@ -28,7 +28,8 @@ export default function Button({ label, type, icon, iconName, link, action }) {
   }
 
   const buttonClasses =
-    buttontype + " py-4 px-8 rounded-lg text-center font-medium max-w-max";
+    buttontype +
+    " py-2 px-4 rounded-lg text-center font-medium max-w-max md:py-4 md:px-8";
 
   if (typeof action === "string") {
     action = () => {};

@@ -9,9 +9,12 @@ export default function NavBar({ type, action, action2 }) {
   switch (type) {
     case "home": {
       return (
-        <div className="w-full h-min bg-primaryBrand-400 flex flex-row py-4 px-6 justify-between items-center">
-          <Link to="/">
-            <img src={logo} alt="Logotipo LifeCare" className="w-5/6" />
+        <div className="w-full bg-primaryBrand-400 flex flex-row py-4 px-6 justify-between items-center">
+          <Link
+            to="/"
+            className="flex flex-row w-2/5 max-w-[14rem] md:w-1/4 lg:w-1/5"
+          >
+            <img src={logo} alt="Logotipo LifeCare" className="w-full" />
           </Link>
           <div className="flex flex-row gap-4">
             <Button label="Como funciona" type="text" action={action} />
@@ -28,9 +31,12 @@ export default function NavBar({ type, action, action2 }) {
     }
     case "client": {
       return (
-        <div className="w-full h-min bg-primaryBrand-400 flex flex-row py-4 px-6 justify-between items-center">
-          <Link to="/">
-            <img src={logo} alt="Logotipo LifeCare" className="w-5/6" />
+        <div className="w-full bg-primaryBrand-400 flex flex-col gap-4 py-4 px-6 justify-between items-center md:flex-row">
+          <Link
+            to="/"
+            className="flex flex-row w-2/5 max-w-[14rem] md:w-1/4 lg:w-1/5"
+          >
+            <img src={logo} alt="Logotipo LifeCare" className="w-full" />
           </Link>
           <div className="flex flex-row gap-4">
             <Button
@@ -55,8 +61,11 @@ export default function NavBar({ type, action, action2 }) {
     case "profissional": {
       return (
         <div className="w-full h-min bg-primaryBrand-400 flex flex-row py-4 px-6 justify-between items-center">
-          <Link to="/">
-            <img src={logo} alt="Logotipo LifeCare" className="w-5/6" />
+          <Link
+            to="/"
+            className="flex flex-row w-2/5 max-w-[14rem] md:w-1/4 lg:w-1/5"
+          >
+            <img src={logo} alt="Logotipo LifeCare" className="w-full" />
           </Link>
           <div className="flex flex-row gap-4">
             <Button
@@ -72,7 +81,7 @@ export default function NavBar({ type, action, action2 }) {
     }
     case "back": {
       return (
-        <div className="w-full h-min bg-primaryBrand-400 flex flex-row px-8 py-4 justify-between items-center">
+        <div className="bg-primaryBrand-400 justify-between items-center w-full flex flex-row px-8 py-4">
           <button
             onClick={() => {
               navigate(-1);
@@ -81,8 +90,11 @@ export default function NavBar({ type, action, action2 }) {
           >
             <MdArrowBackIos color="white" size={24} />
           </button>
-          <Link to="/">
-            <img src={logo} alt="Logotipo LifeCare" className="w-5/6" />
+          <Link
+            to="/"
+            className="flex flex-row w-2/5 max-w-[14rem] md:w-1/4 lg:w-1/5"
+          >
+            <img src={logo} alt="Logotipo LifeCare" className="w-full" />
           </Link>
         </div>
       );

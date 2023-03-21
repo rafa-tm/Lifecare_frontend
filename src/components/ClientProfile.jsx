@@ -36,12 +36,12 @@ export default function ClientProfile() {
   return (
     <div>
       <NavBar type="client" action={() => handleLogout()} />
-      <div className="w-full flex flex-col items-center my-10">
-        <div className="flex flex-col w-3/5 gap-2">
-          <p className="font-bold text-xl">Olá {user.nome} ,</p>
-          <p className="text-xl">Confira suas consultas marcadas:</p>
+      <div className="w-full flex flex-col items-center my-16">
+        <div className="w-10/12 flex flex-col gap-2 text-lg md:px-48 lg:text-xl">
+          <p className="font-bold ">Olá {user.nome} ,</p>
+          <p>Confira suas consultas marcadas:</p>
         </div>
-        <div className="w-[90%] grid grid-cols-3 p-10 gap-2 lg:grid-cols-2">
+        <div className="w-[98%] grid grid-cols-1 px-6 py-10 gap-2 md:grid-cols-2 lg:grid-cols-3">
           {consultas.map((consulta) => (
             <div
               key={consulta.id}
