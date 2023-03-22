@@ -9,14 +9,15 @@ export default function NavBar({ type, action, action2 }) {
   switch (type) {
     case "home": {
       return (
-        <div className="w-full bg-primaryBrand-400 flex flex-row py-4 px-6 justify-between items-center">
+        <div className="w-full bg-primaryBrand-400 flex flex-col py-4 px-6 justify-between items-center  md:flex-row ">
           <Link
             to="/"
-            className="flex flex-row w-2/5 max-w-[14rem] md:w-1/4 lg:w-1/5"
+  
+            className="flex flex-row mt-0  w-1/3 max-w-[14rem] md:w-1/4 lg:w-2/5"
           >
             <img src={logo} alt="Logotipo LifeCare" className="w-full" />
           </Link>
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-row mb-0 mt-2 gap-1 text-sm  sm:text-base lg:gap-4 md:text-sm">
             <Button label="Como funciona" type="text" action={action} />
             <Button label="Especialidades" type="text" action={action2} />
             <Button

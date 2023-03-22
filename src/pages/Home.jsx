@@ -20,7 +20,7 @@ export default function Home() {
         action2={() => handleScrollView(especialidades)}
       />
       <div className="flex flex-col">
-        <div className="flex flex-row items-center w-full justify-center my-32 gap-36">
+        <div className="flex flex-col items-center w-full justify-center my-32 gap-36 md:flex-row">
           <div className="flex flex-col w-3/12 gap-4 items-center">
             <p className="font-bold text-xl text-center">
               Agende sua consulta agora mesmo!
@@ -34,15 +34,14 @@ export default function Home() {
           <img
             src={imgsession1}
             alt="Médicos de diversas habilidades"
-            className="max-w-lg"
+            className="max-w-sm min-[960px]:max-w-lg "
           />
         </div>
 
         {/*como funciona*/}
         <div
           ref={comoFunciona}
-          className="w-full h-min bg-secondaryBrand-500 flex flex-col items-center text-white"
-        >
+          className="w-full h-min bg-secondaryBrand-500 flex flex-col items-center text-white">
           <p className="font-bold text-2xl text-center mt-10">Como funciona?</p>
           <p className="font-bold text-lg text-center">É muito Simples!</p>
 
