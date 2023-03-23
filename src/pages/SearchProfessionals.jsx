@@ -102,7 +102,7 @@ export default function SearchProfessionals() {
             onChange={(e) => setFiltroNome(e.target.value)}
             icon={<MdSearch size={24} />}
           />
-          <div className="w-full flex flex-row justify-evenly items-center">
+          <div className="w-full flex flex-col gap-4 justify-evenly items-center md:flex-row">
             <TextField
               id="nome"
               placeholder="Digite uma cidade"
@@ -118,7 +118,7 @@ export default function SearchProfessionals() {
               action={searchCity}
             />
           </div>
-          <div className="flex flex-col w-full gap-2 items-center lg:flex-row">
+          <div className="flex flex-col w-full gap-2 items-center md:flex-row">
             <TextField
               id="nome"
               placeholder="Área"

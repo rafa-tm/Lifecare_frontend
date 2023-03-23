@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../services/api";
+import Button from "./Button";
 import NavBar from "./NavBar";
 
 export default function ProfessionalProfile() {
   const [user, setUser] = useState("");
   const [consultas, setConsultas] = useState([]);
+  const [controleConsultas, setControleConsultas] = useState([]);
   const history = useNavigate();
   const typeUser = localStorage.getItem("type");
   const tokenUser = localStorage.getItem("token");
@@ -17,19 +19,32 @@ export default function ProfessionalProfile() {
         setUser(response.data.user);
       });
     }
+    getUser();
+  }, []);
+
+  useEffect(() => {
     async function getConsultas() {
       const data = { type: typeUser, token: tokenUser };
       await api.post("consultasuser", data).then((response) => {
         setConsultas(response.data);
       });
     }
-    getUser();
     getConsultas();
-  }, []);
+  }, [controleConsultas]);
 
   async function handleLogout() {
     localStorage.clear();
     history("/");
+  }
+
+  async function cancelConsulta(id) {
+    await api.put(`consultas/${id}`);
+    setControleConsultas([...controleConsultas, 1]);
+  }
+
+  async function deleteConsulta(id) {
+    await api.delete(`consultas/${id}`);
+    setControleConsultas([...controleConsultas, 1]);
   }
 
   const styleLine = "flex flex-row w-full justify-between";
@@ -50,7 +65,7 @@ export default function ProfessionalProfile() {
           {consultas.map((consulta) => (
             <div
               key={consulta.id}
-              className="bg-white border-gray-200 border-2 shadow-lg flex flex-col gap-2 p-8 rounded-lg"
+              className="bg-white border-gray-200 border-2 shadow-lg flex flex-col items-center gap-2 p-8 rounded-lg"
             >
               <div className={styleLine}>
                 <p>Data da consulta</p>
@@ -63,6 +78,28 @@ export default function ProfessionalProfile() {
               <div className={styleLine}>
                 <p>Contato:</p>
                 <strong>{consulta.cliente.telefone}</strong>
+              </div>
+              <div className="flex flex-col items-center gap-6 py-2">
+                {consulta.estado === true && (
+                  <div className="flex flex-col gap-6 w-full justify-around text-center">
+                    <Button
+                      type="secondary"
+                      label="Cancelar consulta"
+                      action={() => cancelConsulta(consulta.id)}
+                    />
+                  </div>
+                )}
+
+                {consulta.estado === false && (
+                  <div className="flex flex-col gap-6 w-full justify-around text-center">
+                    <p>Consulta cancelada!</p>
+                    <Button
+                      type="tertiary"
+                      label="Deletar consulta"
+                      action={() => deleteConsulta(consulta.id)}
+                    />
+                  </div>
+                )}
               </div>
             </div>
           ))}
