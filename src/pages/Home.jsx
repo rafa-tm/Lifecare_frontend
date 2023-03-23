@@ -42,36 +42,36 @@ export default function Home() {
         <div
           ref={comoFunciona}
           className="w-full gap-12 p-10 bg-secondaryBrand-500 flex flex-col items-center  text-white">
-            <div className="flex flex-col items-center gap-4 font-bold">
-              <p className="text-3xl">Como Funciona?</p>
-              <p className="text-xl">Muito simples!</p>
+            <div className="flex flex-col items-center gap-1 sm:gap-4 font-bold">
+              <p className="text-2xl sm:text-3xl">Como Funciona?</p>
+              <p className="text-lg sm:text-xl">Muito simples!</p>
             </div>
-            <div className=" w-3/5 flex flex-col gap-14">
-              <div className="w-full bg-primaryBrand-400 gap-10 h-max flex items-center text-white rounded-3xl">
-                <div className="bg-primaryBrand-700  items-center w-1/6 rounded-3xl py-12">
-                  <p className="font-bold text-4xl text-center  ">1</p>
+            <div className=" w-4/5 flex flex-col gap-12 lg:gap-14 lg:w-3/5">
+              <div className="w-full bg-primaryBrand-400 gap-0 sm:gap-10 h-max flex flex-col items-center text-white rounded-2xl sm:flex-row">
+                <div className="bg-primaryBrand-700  items-center w-1/5 sm:w-28  rounded-full sm:rounded-2xl py-5 -mt-8 sm:mt-0 sm:py-12">
+                  <p className="font-bold text-xl text-center sm:text-4xl">1</p>
                 </div>
-                <div className="w-full flex flex-col items-center gap-5 p-7">
-                  <p className="font-bold text-2xl text-center">Busca</p>
-                  <p className="font-light text-xl tex-center">Busque por uma área e especialidade desejada</p>
-                </div>
-              </div>
-              <div className="w-full bg-primaryBrand-400 gap-10 h-max flex items-center text-white rounded-3xl">
-                <div className="bg-primaryBrand-700  items-center w-1/6 rounded-3xl py-12">
-                  <p className=" font-bold text-4xl  text-center ">2</p>
-                </div>
-                <div className="w-full flex flex-col items-center gap-5 p-7">
-                  <p className="font-bold text-2xl text-center">Agendamento</p>
-                  <p className="font-light text-xl tex-center">Realize o agendamento com o profissional escolhido</p>
+                <div className="w-full flex flex-col items-center justify-center py-5 sm:py-0 gap-3 sm:gap-5">
+                  <p className="font-bold text-lg sm:text-xl md:text-2xl text-center">Busca</p>
+                  <p className="font-light text-sm min-[570px]:text-base sm:text-lg md:text-xl tex-center">Busque por uma área e especialidade desejada</p>
                 </div>
               </div>
-              <div className="w-full bg-primaryBrand-400 gap-10 h-max flex items-center text-white rounded-3xl">
-                <div className="bg-primaryBrand-700  items-center w-1/6 rounded-3xl py-12">
-                  <p className=" font-bold text-4xl text-center ">3</p>
+              <div className="w-full bg-primaryBrand-400 gap-0 sm:gap-10 h-max flex flex-col items-center text-white rounded-2xl sm:flex-row">
+                <div className="bg-primaryBrand-700  items-center w-1/5 sm:w-28  rounded-full sm:rounded-2xl py-5 -mt-8 sm:mt-0 sm:py-12">
+                  <p className=" font-bold text-xl text-center sm:text-4xl">2</p>
                 </div>
-                <div className="w-full flex flex-col items-center gap-5 p-7">
-                  <p className="font-bold text-2xl text-center">Consulta</p>
-                  <p className="font-light text-xl tex-center">Compareça ao consultório na data e horário marcados</p>
+                <div className="w-full flex flex-col items-center justify-center py-5 sm:py-0 gap-3 sm:gap-5">
+                  <p className="font-bold text-lg sm:text-xl md:text-2xl text-center">Agendamento</p>
+                  <p className="font-light text-sm min-[570px]:text-base sm:text-lg md:text-xl text-center">Realize o agendamento com o profissional escolhido</p>
+                </div>
+              </div>
+              <div className="w-full bg-primaryBrand-400 gap-0 sm:gap-10 h-max flex flex-col items-center text-white rounded-2xl sm:flex-row">
+                <div className="bg-primaryBrand-700  items-center w-1/5 sm:w-28  rounded-full sm:rounded-2xl py-5 -mt-8 sm:mt-0 sm:py-12">
+                  <p className=" font-bold text-xl text-center sm:text-4xl">3</p>
+                </div>
+                <div className="w-full flex flex-col items-center justify-center py-5 sm:py-0 gap-3 sm:gap-5">
+                  <p className="font-bold text-lg sm:text-xl md:text-2xl text-center">Consulta</p>
+                  <p className="font-light text-sm min-[570px]:text-base sm:text-lg md:text-xl text-center">Compareça ao consultório na data e horário marcados</p>
                 </div>
               </div>
             </div>
