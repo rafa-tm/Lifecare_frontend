@@ -46,10 +46,10 @@ export default function Home() {
               <p className="text-3xl">Como Funciona?</p>
               <p className="text-xl">Muito simples!</p>
             </div>
-            <div className="w-3/5 flex flex-col gap-14">
+            <div className=" w-3/5 flex flex-col gap-14">
               <div className="w-full bg-primaryBrand-400 gap-10 h-max flex items-center text-white rounded-3xl">
-                <div className="bg-primaryBrand-700  items-center  flex  justify-center pt-24 pr-20  rounded-3xl">
-                  <p className=" font-bold text-4xl text-center ">1</p>
+                <div className="bg-primaryBrand-700  items-center w-1/6 rounded-3xl py-12">
+                  <p className="font-bold text-4xl text-center  ">1</p>
                 </div>
                 <div className="w-full flex flex-col items-center gap-5 p-7">
                   <p className="font-bold text-2xl text-center">Busca</p>
@@ -57,7 +57,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full bg-primaryBrand-400 gap-10 h-max flex items-center text-white rounded-3xl">
-                <div className="bg-primaryBrand-700  items-center  flex justify-center pt-24 pr-20  rounded-3xl">
+                <div className="bg-primaryBrand-700  items-center w-1/6 rounded-3xl py-12">
                   <p className=" font-bold text-4xl  text-center ">2</p>
                 </div>
                 <div className="w-full flex flex-col items-center gap-5 p-7">
@@ -66,7 +66,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full bg-primaryBrand-400 gap-10 h-max flex items-center text-white rounded-3xl">
-                <div className="bg-primaryBrand-700  items-center  flex justify-center pt-24 pr-20 rounded-3xl">
+                <div className="bg-primaryBrand-700  items-center w-1/6 rounded-3xl py-12">
                   <p className=" font-bold text-4xl text-center ">3</p>
                 </div>
                 <div className="w-full flex flex-col items-center gap-5 p-7">
