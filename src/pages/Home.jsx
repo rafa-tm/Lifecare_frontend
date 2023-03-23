@@ -20,12 +20,12 @@ export default function Home() {
         action2={() => handleScrollView(especialidades)}
       />
       <div className="flex flex-col">
-        <div className="flex flex-col items-center w-full justify-center my-32 gap-36 md:flex-row">
-          <div className="flex flex-col w-3/12 gap-4 items-center">
-            <p className="font-bold text-xl text-center">
+        <div className="flex flex-col items-center w-full justify-center my-32 gap-10 sm:flex-row">
+          <div className="flex flex-col w-full gap-4 items-center sm:w-1/2">
+            <p className=" w-2/3 font-bold text-xl text-center xl:w-full lg:text-3xl md:text-2xl sm:2xl ">
               Agende sua consulta agora mesmo!
             </p>
-            <p className="text-lg text-center">
+            <p className="w-5/6 text-sm text-center md:text-base lg:text-xl sm:w-2/3 ">
               Em nosso sistema você encontra uma infinidade de profissionais de
               diversas áreas e especialidades para que você o melhor cuidado.
             </p>
@@ -34,7 +34,7 @@ export default function Home() {
           <img
             src={imgsession1}
             alt="Médicos de diversas habilidades"
-            className="max-w-sm min-[960px]:max-w-lg "
+            className=" w-2/5 max-w-md lg:max-w-md "
           />
         </div>
 
@@ -83,23 +83,26 @@ export default function Home() {
         </div>
 
         {/*footer*/}
-        <div className="w-full h-min bg-primaryBrand-400 flex flex-row py-10 px-6 justify-between items-center text-white">
+        <div className="w-full h-min bg-primaryBrand-400 flex flex-row py-10 px-6 justify-evenly items-center text-white text-sm
+         xl:text-lg lg:text-xl sm:text-base">
           <div>
-            <img src={logo} alt="Logotipo LifeCare" className="w-5/6" />
+            <img src={logo} alt="Logotipo LifeCare" className="w-4/6 lg:w-full sm:5/6" />
           </div>
           <div className="flex flex-col gap-1  ">
-            <p className="font-bold text-xl">Privacidade</p>
+            <p className="font-bold">Privacidade</p>
             <div className=" flex flex-col gap-1">
               <p>Política de cookies</p>
               <p>Política de Privacidade</p>
               <p>Termos de Uso</p>
             </div>
           </div>
-          <div className="flex flex-col gap-1  ">
-            <p className="font-bold text-xl">00.000.0000/0001-00</p>
+          <div className="flex flex-col gap-1 text-right">
+            <p className="font-bold">00.000.0000/0001-00</p>
+            <div className="flex flex-col gap-1">
             <p>Rod. Washington Luiz, s/n - Monjolinho</p>
             <p>São Carlos - SP</p>
             <p>LifeCare®</p>
+            </div>
           </div>
         </div>
       </div>
