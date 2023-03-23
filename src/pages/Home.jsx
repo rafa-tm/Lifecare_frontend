@@ -41,45 +41,41 @@ export default function Home() {
         {/*como funciona*/}
         <div
           ref={comoFunciona}
-          className="w-full h-min bg-secondaryBrand-500 flex flex-col items-center text-white">
-          <p className="font-bold text-2xl text-center mt-10">Como funciona?</p>
-          <p className="font-bold text-lg text-center">É muito Simples!</p>
-
-          <div className="w-full h-min bg-secondaryBrand-500 flex flex-col items-center my-5 text-white">
-            <div className="bg-primaryBrand-400 flex flex-row rounded-md items-center justify-evenly">
-              <div>
-                <p className="rounded-md bg-primaryBrand-700 py-10 px-10">1</p>
+          className="w-full gap-12 p-10 bg-secondaryBrand-500 flex flex-col items-center  text-white">
+            <div className="flex flex-col items-center gap-4 font-bold">
+              <p className="text-3xl">Como Funciona?</p>
+              <p className="text-xl">Muito simples!</p>
+            </div>
+            <div className="w-3/5 flex flex-col gap-14">
+              <div className="w-full bg-primaryBrand-400 gap-10 h-max flex items-center text-white rounded-3xl">
+                <div className="bg-primaryBrand-700  items-center  flex  justify-center pt-24 pr-20  rounded-3xl">
+                  <p className=" font-bold text-4xl text-center ">1</p>
+                </div>
+                <div className="w-full flex flex-col items-center gap-5 p-7">
+                  <p className="font-bold text-2xl text-center">Busca</p>
+                  <p className="font-light text-xl tex-center">Busque por uma área e especialidade desejada</p>
+                </div>
               </div>
-              <div className="w-3/6 rounded-md  flex flex-col text-xl text-center px-8">
-                <p className="font-bold text-2xl text-center">Busca</p>
-                <p>Busque por uma área e especialidade desejada</p>
+              <div className="w-full bg-primaryBrand-400 gap-10 h-max flex items-center text-white rounded-3xl">
+                <div className="bg-primaryBrand-700  items-center  flex justify-center pt-24 pr-20  rounded-3xl">
+                  <p className=" font-bold text-4xl  text-center ">2</p>
+                </div>
+                <div className="w-full flex flex-col items-center gap-5 p-7">
+                  <p className="font-bold text-2xl text-center">Agendamento</p>
+                  <p className="font-light text-xl tex-center">Realize o agendamento com o profissional escolhido</p>
+                </div>
+              </div>
+              <div className="w-full bg-primaryBrand-400 gap-10 h-max flex items-center text-white rounded-3xl">
+                <div className="bg-primaryBrand-700  items-center  flex justify-center pt-24 pr-20 rounded-3xl">
+                  <p className=" font-bold text-4xl text-center ">3</p>
+                </div>
+                <div className="w-full flex flex-col items-center gap-5 p-7">
+                  <p className="font-bold text-2xl text-center">Consulta</p>
+                  <p className="font-light text-xl tex-center">Compareça ao consultório na data e horário marcados</p>
+                </div>
               </div>
             </div>
-            <div className="w-full flex flex-row items-center justify-center">
-              <div>
-                <p className="rounded-md bg-primaryBrand-700 py-10 px-10">2</p>
-              </div>
-              <div className="w-3/6 rounded-md bg-primaryBrand-400 flex flex-col  text-xl  my-5 text-center">
-                <p className="font-bold text-2xl text-center my-3">
-                  Agendamento
-                </p>
-                <p className="my-3">
-                  Realize o agendamento com o profissional escolhido
-                </p>
-              </div>
-            </div>
-            <div className="w-full flex flex-row items-center justify-center">
-              <div>
-                <p className="rounded-md bg-primaryBrand-700 py-10 px-10">3</p>
-              </div>
-              <div className="w-3/6 rounded-md bg-primaryBrand-400 flex flex-col  text-xl  my-5  text-center">
-                <p className="font-bold text-2xl text-center my-3">Consulta</p>
-                <p className="my-3">
-                  Compareça ao consultório na data e horário marcados
-                </p>
-              </div>
-            </div>
-          </div>
+          
         </div>
 
         {/*footer*/}
