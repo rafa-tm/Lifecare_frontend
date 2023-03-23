@@ -38,10 +38,11 @@ export default function Profile() {
       const email = document.getElementById("email").value;
       const senha = document.getElementById("senha").value;
       const data = { email, senha };
-      const response = await api.post("login", data);
+      const response = await api.post("login", data).then((response) => {
+        localStorage.setItem("token", response.data.token);
+        localStorage.setItem("type", response.data.type);
+      });
 
-      localStorage.setItem("token", response.data.token);
-      localStorage.setItem("type", response.data.type);
       history("/profile");
     } catch (err) {
       setHasError(err.response.data.erro);

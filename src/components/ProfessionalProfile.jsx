@@ -42,6 +42,11 @@ export default function ProfessionalProfile() {
           <p>Confira as consultas marcadas com você:</p>
         </div>
         <div className="w-[98%] grid grid-cols-1 px-6 py-10 gap-2 md:grid-cols-2 lg:grid-cols-3">
+          {consultas.length === 0 && (
+            <div className="text-xl text-center font-bold w-full my-24 md:col-span-2 lg:col-span-3">
+              <p>Não há nenhuma consulta marcada com você ainda!</p>
+            </div>
+          )}
           {consultas.map((consulta) => (
             <div
               key={consulta.id}
