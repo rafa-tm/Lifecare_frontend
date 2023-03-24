@@ -3,6 +3,11 @@ import Button from "../components/Button";
 import logo from "/Logotipo.svg";
 import NavBar from "../components/NavBar";
 import imgsession1 from "/Doctors_amico.svg";
+import cardio from "/Cardiologist-pana.png";
+import gineco from "/Gynecology consultation-pana.png";
+import oftalmo from "/Ophthalmologist-pana.png";
+import pediatra from "/Pediatrician-pana.png"
+
 
 export default function Home() {
   const comoFunciona = useRef(null);
@@ -29,7 +34,7 @@ export default function Home() {
               Em nosso sistema você encontra uma infinidade de profissionais de
               diversas áreas e especialidades para que você o melhor cuidado.
             </p>
-            <Button label="Ver Especialidades" type="primary" link="#" />
+            <Button label="Ver Especialidades" type="primary" action={() => handleScrollView(especialidades)}/>
           </div>
           <img
             src={imgsession1}
@@ -47,37 +52,48 @@ export default function Home() {
               <p className="text-lg sm:text-xl">Muito simples!</p>
             </div>
             <div className=" w-4/5 flex flex-col gap-12 lg:gap-14 lg:w-3/5">
-              <div className="w-full bg-primaryBrand-400 gap-0 sm:gap-10 h-max flex flex-col items-center text-white rounded-2xl sm:flex-row">
-                <div className="bg-primaryBrand-700  items-center w-1/5 sm:w-28  rounded-full sm:rounded-2xl py-5 -mt-8 sm:mt-0 sm:py-12">
+              <div className="w-full bg-primaryBrand-400 gap-0 sm:gap-10 h-max flex flex-col items-center text-white shadow-lg shadow-secondaryBrand-700 rounded-2xl sm:flex-row">
+                <div className="bg-primaryBrand-700  items-center w-[70px] sm:w-28 min-[570px]:w-[80px] min-[570px]:py-6  rounded-full sm:rounded-2xl py-5 -mt-8 sm:mt-0 sm:py-12 ">
                   <p className="font-bold text-xl text-center sm:text-4xl">1</p>
                 </div>
                 <div className="w-full flex flex-col items-center justify-center py-5 sm:py-0 gap-3 sm:gap-5">
                   <p className="font-bold text-lg sm:text-xl md:text-2xl text-center">Busca</p>
-                  <p className="font-light text-sm min-[570px]:text-base sm:text-lg md:text-xl tex-center">Busque por uma área e especialidade desejada</p>
+                  <p className="font-light text-sm min-[570px]:text-base sm:text-lg md:text-xl text-center px-2">Busque por uma área e especialidade desejada</p>
                 </div>
               </div>
-              <div className="w-full bg-primaryBrand-400 gap-0 sm:gap-10 h-max flex flex-col items-center text-white rounded-2xl sm:flex-row">
-                <div className="bg-primaryBrand-700  items-center w-1/5 sm:w-28  rounded-full sm:rounded-2xl py-5 -mt-8 sm:mt-0 sm:py-12">
+              <div className="w-full bg-primaryBrand-400 gap-0 sm:gap-10 h-max flex flex-col items-center text-white shadow-lg shadow-secondaryBrand-700 rounded-2xl sm:flex-row">
+                <div className="bg-primaryBrand-700  items-center w-[70px] sm:w-28 min-[570px]:w-[80px] min-[570px]:py-6  rounded-full sm:rounded-2xl py-5 -mt-8 sm:mt-0 sm:py-12">
                   <p className=" font-bold text-xl text-center sm:text-4xl">2</p>
                 </div>
                 <div className="w-full flex flex-col items-center justify-center py-5 sm:py-0 gap-3 sm:gap-5">
                   <p className="font-bold text-lg sm:text-xl md:text-2xl text-center">Agendamento</p>
-                  <p className="font-light text-sm min-[570px]:text-base sm:text-lg md:text-xl text-center">Realize o agendamento com o profissional escolhido</p>
+                  <p className="font-light text-sm min-[570px]:text-base sm:text-lg md:text-xl text-center px-2">Realize o agendamento com o profissional escolhido</p>
                 </div>
               </div>
-              <div className="w-full bg-primaryBrand-400 gap-0 sm:gap-10 h-max flex flex-col items-center text-white rounded-2xl sm:flex-row">
-                <div className="bg-primaryBrand-700  items-center w-1/5 sm:w-28  rounded-full sm:rounded-2xl py-5 -mt-8 sm:mt-0 sm:py-12">
+              <div className="w-full bg-primaryBrand-400 gap-0 sm:gap-10 h-max flex flex-col items-center text-white shadow-lg shadow-secondaryBrand-700 rounded-2xl sm:flex-row">
+                <div className="bg-primaryBrand-700  items-center w-[70px] sm:w-28 min-[570px]:w-[80px] min-[570px]:py-6  rounded-full sm:rounded-2xl py-5 -mt-8 sm:mt-0 sm:py-12">
                   <p className=" font-bold text-xl text-center sm:text-4xl">3</p>
                 </div>
                 <div className="w-full flex flex-col items-center justify-center py-5 sm:py-0 gap-3 sm:gap-5">
                   <p className="font-bold text-lg sm:text-xl md:text-2xl text-center">Consulta</p>
-                  <p className="font-light text-sm min-[570px]:text-base sm:text-lg md:text-xl text-center">Compareça ao consultório na data e horário marcados</p>
+                  <p className="font-light text-sm min-[570px]:text-base sm:text-lg md:text-xl text-center px-2">Compareça ao consultório na data e horário marcados</p>
                 </div>
               </div>
             </div>
-          
         </div>
 
+        {/*especialidades*/}
+        <div ref={especialidades} className="w-full flex flex-col gap-16 py-20">
+          <p className="text-center text-2xl font-bold px-5 ">Algumas das especialidades dos profissionais cadastrados em nosso sistema</p>
+          <div className="w-full  grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-28 px-20"> 
+            <img src={cardio} alt="Cardiologista" className="w-full max-w-xs min-w-[180px]   py-5 border shadow-lg shadow-gray-400 rounded-xl"/>
+            <img src={gineco} alt="Ginecologista" className="w-full max-w-xs min-w-[180px] py-5 border shadow-lg shadow-gray-400 rounded-xl"/>
+            <img src={oftalmo} alt="Oftalmologista" className="w-full justify-center max-w-xs min-w-[180px] py-5 border shadow-lg shadow-gray-400 rounded-xl"/>
+            <img src={pediatra} alt="Pediatra" className="w-full max-w-xs min-w-[180px]  py-5 border shadow-lg shadow-gray-400 rounded-xl"/>
+          </div>
+        </div>
+
+        
         {/*footer*/}
         <div className="w-full h-min bg-primaryBrand-400 flex flex-row py-10 px-6 justify-evenly items-center text-white text-sm
          xl:text-lg lg:text-xl sm:text-base">
